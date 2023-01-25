@@ -100,7 +100,7 @@ Sub AllStocksAnalysis()
         RowCount = Cells(Rows.Count, "A").End(xlUp).Row
         
     '4) Loop through the tickers.
-    For i = 0 To 11
+    For i = 0 To 10
     
         ticker = tickers(i)
         totalVolume = 0
@@ -171,17 +171,14 @@ Sub formatAllStocksAnalysisTable()
     For i = dataRowStart To dataRowEnd
     
         If Cells(i, 3) > 0 Then
-        
             'Color the cell green
             Cells(i, 3).Interior.Color = vbGreen
-            
+       
         ElseIf Cells(4, 3) < 0 Then
-        
             'Color the cell red
             Cells(i, 3).Interior.Color = vbRed
         
         Else
-        
             'Clear the cell color
             Cells(i, 3).Interior.Color = xlNone
     
@@ -199,7 +196,7 @@ End Sub
 
 Sub yearValueAnalysis()
 
-    YearValue = InputBox("What year would you like to run the analysis on?")
+YearValue = InputBox("Type A Year for Stock Analysis?")
 
 End Sub
 
